@@ -23,14 +23,14 @@ after_success:
   - docker push rayashi/multi-server
   - docker push rayashi/multi-worker
 
-  deploy:
-    provider: elasticbeanstalk
-    region: "us-west-2"
-    name: "multi-docker"
-    env: "MultiDocker-env"
-    bucket_name: "elasticbeanstalk-us-west-2-417569163744"
-    bucket_path: "docker-multi"
-    on:
-      branch: master
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  name: "multi-docker"
+  env: "MultiDocker-env"
+  bucket_name: "elasticbeanstalk-us-west-2-417569163744"
+  bucket_path: "docker-multi"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
