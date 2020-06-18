@@ -25,7 +25,7 @@
     {
       "name": "nginx",
       "image": "rayashi/multi-nginx",
-      "hotname": "nginx",
+      "hostname": "nginx",
       "essential": true,
       "portMappings": [
         {
