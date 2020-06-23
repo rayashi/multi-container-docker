@@ -14,12 +14,12 @@ export default () => {
 
   const fetchValues = async () => {
     const values = await axios.get('api/values/current');
-    setValues(values.data);
+    values.data instanceof Array && setValues(values.data);
   };
 
   const fetchIndexes = async () => {
     const indexes = await axios.get('api/values/all');
-    setSeenIndexes(indexes.data);
+    indexes.data instanceof Array && setSeenIndexes(indexes.data);
   };
 
   const renderIndexes = () => {
