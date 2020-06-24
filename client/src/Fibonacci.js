@@ -14,7 +14,7 @@ export default () => {
 
   const fetchValues = async () => {
     const values = await axios.get('api/values/current');
-    values.data instanceof Array && setValues(values.data);
+    values.data instanceof Object && setValues(values.data);
   };
 
   const fetchIndexes = async () => {
